@@ -1,10 +1,16 @@
-const chai = window.chai;
+const newLocal = window.chai;
+const chai = newLocal;
 const expect = chai.expect;
 
 describe("Variables en JS", () => {
     it("Completa todas las constantes que faltan", () => {
 
         const a = 10;
+        const b = 1.34;
+        const c = true;      
+        const d = "Buenos días"
+        const e = "Pepe"
+        const f = "Buenos días, pepe"
 
         expect(a).to.equal(10);
         expect(b).to.equal(1.34);
@@ -17,6 +23,16 @@ describe("Variables en JS", () => {
     it("Completa todas las variables que faltan para que las operaciones resulten correctamente", () => {
 
         let a = 11;
+        let b = 0.34;
+        let c = 10;
+        let d = 100;
+        let e =  440;
+        let f = 10
+        let g = 3
+        let x = 2
+        let y = 1;
+    
+
 
         expect(a + b).to.equal(11.34);
         expect(a * c).to.equal(110);
@@ -30,6 +46,10 @@ describe("Variables en JS", () => {
     it("Completa todas las variables que faltan para que se cumplan las condiciones", () => {
 
         let a = 10;
+        let b = 100
+        let c = undefined
+        let d = "Hell"
+        let n = "b"
 
         expect(a > 9).to.be.true;
         expect(a < 11).to.be.true;
@@ -51,9 +71,9 @@ describe("condicionales en javascript", () => {
         if (name.length === 6) {
             result = "OK"
         }
-
+            
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "KO").to.be.true;
     })
 
     it("comparando cadenas (strings)", () => {
@@ -143,7 +163,7 @@ describe("Funciones en JS", () => {
     it("Cuál es el resultado de invocar la función? (2)", () => {
 
         let result = g("Cerebro", "Pinky");
-
+        
 
         // substituye "???" por el valor que tiene la variable "result"        
         expect(result === "???").to.be.true;
